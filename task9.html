@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="chatApp">
+<head>
+    <title>Real-time Chat Application</title>
+    <link rel="stylesheet" type="text/css" href="task9.css">
+</head>
+<body ng-controller="chatController">
+    <div class="container">
+        <h2>Real-time Chat Application</h2>
+        <div class="chat-window">
+            <div class="messages">
+                <div ng-repeat="message in messages">
+                    <div class="message" ng-class="{ 'my-message': message.from === 'Me', 'other-message': message.from !== 'Me' }">
+                        <strong>{{ message.from }}:</strong> {{ message.text }}
+                    </div>
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" ng-model="newMessage" placeholder="Type your message...">
+                <button ng-click="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="task9.js"></script>
+</body>
+</html>

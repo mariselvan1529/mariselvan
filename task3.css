@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.weather-container {
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.location {
+    text-align: center;
+}
+
+.current-weather {
+    text-align: center;
+}
+
+.current-weather h3 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.current-weather p {
+    margin-top: 5px;
+}
+
+.current-weather img {
+    margin-top: 10px;
+    max-width: 100px;
+}

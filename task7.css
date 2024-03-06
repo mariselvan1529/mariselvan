@@ -1,0 +1,28 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+label {
+    margin-right: 5px;
+}
+
+.product-list {
+    margin-top: 20px;
+}
+
+.product-list > div {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product-list > div h4 {
+    margin-top: 0;
+}
+
+.product-list > div p {
+    margin: 5px 0;
+}

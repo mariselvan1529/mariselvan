@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventCalendarApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Event Calendar</title>
+    <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+    <div ng-controller="CalendarController as calendarCtrl">
+        <h1>Event Calendar</h1>
+        <div class="calendar">
+            <div class="header">
+                <button ng-click="calendarCtrl.prevMonth()">Prev</button>
+                <h2>{{ calendarCtrl.currentMonth }}</h2>
+                <button ng-click="calendarCtrl.nextMonth()">Next</button>
+            </div>
+            <div class="days">
+                <div class="day" ng-repeat="day in calendarCtrl.days">
+                    {{ day }}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="task4.js"></script>
+</body>
+</html>

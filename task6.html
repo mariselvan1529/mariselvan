@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="quizApp">
+<head>
+    <title>Quiz Application</title>
+    <link rel="stylesheet" type="text/css" href="task6.css">
+</head>
+<body ng-controller="quizController">
+    <div class="container">
+        <h2>Quiz Application</h2>
+        <div ng-if="!quizCompleted">
+            <div ng-if="!quizStarted">
+                <button ng-click="startQuiz()">Start Quiz</button>
+            </div>
+            <div ng-if="quizStarted">
+                <h3>{{ currentQuestion.question }}</h3>
+                <ul>
+                    <li ng-repeat="option in currentQuestion.options" ng-click="selectOption(option)">
+                        {{ option }}
+                    </li>
+                </ul>
+                <button ng-click="nextQuestion()" ng-disabled="!selectedOption">Next</button>
+            </div>
+        </div>
+        <div ng-if="quizCompleted">
+            <h3>Congratulations, you have completed the quiz!</h3>
+            <p>Your score: {{ score }}</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="task6.js"></script>
+</body>
+</html>

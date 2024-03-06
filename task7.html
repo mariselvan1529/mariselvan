@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="productCatalogApp">
+<head>
+    <title>Product Catalog with Filters</title>
+    <link rel="stylesheet" type="text/css" href="task7.css">
+</head>
+<body ng-controller="productCatalogController">
+    <div class="container">
+        <h2>Product Catalog</h2>
+        <div>
+            <h3>Filters</h3>
+            <label>Category:</label>
+            <select ng-model="selectedCategory" ng-change="applyFilters()">
+                <option value="">All</option>
+                <option ng-repeat="category in categories" value="{{ category }}">{{ category }}</option>
+            </select>
+            <br>
+            <label>Feature:</label>
+            <select ng-model="selectedFeature" ng-change="applyFilters()">
+                <option value="">All</option>
+                <option ng-repeat="feature in features" value="{{ feature }}">{{ feature }}</option>
+            </select>
+        </div>
+        <div class="product-list">
+            <h3>Products</h3>
+            <div ng-repeat="product in filteredProducts">
+                <h4>{{ product.name }}</h4>
+                <p>Category: {{ product.category }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <p>Features: {{ product.features.join(', ') }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="task7.js"></script>
+</body>
+</html>

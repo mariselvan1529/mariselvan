@@ -1,0 +1,53 @@
+.container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input, button {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task {
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    cursor: pointer;
+    float: right;
+    color: red;
+}
+
+.fade-in {
+    animation: fadeInAnimation 0.5s ease-in forwards;
+}
+
+.fade-out {
+    animation: fadeOutAnimation 0.5s ease-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}

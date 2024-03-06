@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.image img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.details img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.details p {
+  margin-top: 10px;
+}
